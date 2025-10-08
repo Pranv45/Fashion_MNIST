@@ -1,0 +1,30 @@
+# config/sweep.yaml
+program: train.py
+method: bayes
+
+command:
+  - ${env}
+  - python
+  - ${program}
+
+metric:
+  name: val_accuracy
+  goal: maximize
+
+parameters:
+  training.epochs:
+    values: [5, 10]
+  training.learning_rate:
+    values: [0.1, 0.01, 0.001]
+  model.hidden_sizes:
+    values:
+      - [128, 64]
+      - [256, 128, 64]
+  model.activation:
+    values: ["relu", "tanh", "sigmoid"]
+  training.optimizer:
+    values: ["sgd", "momentum", "nesterov", "rmsprop", "adam", "nadam"]
+  data.batch_size:
+    values: [32, 64, 128]
+  model.weight_init:
+    values: ["random", "xavier"]

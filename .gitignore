@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+*.venv/
+env/
+*.env/
+
+# Experiment tracking logs
+wandb/
+
+# IDE and editor directories
+.vscode/
+.idea/
+
+# Data files (optional - uncomment if your data folder is large)
+# data/
+
+# Environment variables
+.env
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
